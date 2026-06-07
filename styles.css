@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #f8f9fa;
+    --primary-light: #e9ecef;
+    --accent-color: #f39c12;
+    --text-color: #f8f9fa;
+    --light-bg: #1a1a1a;
+    --dark-bg: #000000;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--dark-bg);
+}
+
+nav {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    color: var(--primary-color);
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    min-height: calc(100vh - 80px);
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 4rem;
+}
+
+.hero-content .badge {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h1 .english-name {
+    color: #ccc;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+
+.hero-content .title {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content .description {
+    font-size: 1rem;
+    color: #bbb;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.stats {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat-item {
+    text-align: left;
+}
+
+.stat-item .stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    display: block;
+}
+
+.stat-item .stat-label {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.hero-content .btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: black;
+}
+
+.hero-image {
+    flex: 0 0 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-frame {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 10px 40px rgba(44, 62, 80, 0.3);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .stats {
+        justify-content: center;
+    }
+    
+    .btn-group {
+        justify-content: center;
+    }
+}
